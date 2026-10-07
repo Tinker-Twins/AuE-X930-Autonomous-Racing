@@ -130,7 +130,7 @@ flowchart TB
 - All **network** modules are highlighted in $\color{green}{\text{green}}$ color.
 - All **actuator** modules are highlighted in $\color{gold}{\text{yellow}}$ color.
 
-## 1. Handover
+## 1. Handover procedure
 
 Each team will be provided with a course equipment package, which includes:
 - 1 × NeoRacer vehicle (with 1 × LiPo battery)
@@ -147,7 +147,7 @@ Teams may be responsible for any damage, loss, or misuse of the NeoRacer hardwar
 
 Each team will sign the [Equipment Acknowledgment Form](Equipment-Acknowledgment-Form.docx) to complete the handover.
 
-## 2. Unboxing
+## 2. Unbox the course equipment package
 
 Verify the contents of your course equipment package:
 - [x] 1 × NeoRacer vehicle (with 1 × LiPo battery)
@@ -217,14 +217,14 @@ block
 ```
 
 > [!TIP]
-> Refer to the [NeoRacer unboxing guide](https://neobotics.org/docs/getting-started/unbox) for details on the contents of the NeoRacer shipment package.
+> Refer to the [NeoRacer unboxing guide](https://neobotics.org/docs/getting-started/unbox) to learn more about the contents of the NeoRacer shipment package.
 
-## 3. Setup
+## 3. Setup the vehicle
 
 The very first step to getting started with the vehicle setup is most likely to charge the LiPo battery, since it would have been in "storage" mode with ~3.85 V/cell (about 11.55 V total).
 
 > [!TIP]
-> Refer to the [NeoRacer battery charging guide](https://neobotics.org/docs/getting-started/charge-and-power) for details on charging the battery.
+> Refer to the [NeoRacer battery charging guide](https://neobotics.org/docs/getting-started/charge-and-power) to learn more about charging the battery.
 
 Once the battery is charged, you can begin the hardware setup:
 - Setup the WiFi router (Cudy TR1200)
@@ -235,19 +235,53 @@ Once the battery is charged, you can begin the hardware setup:
 - Connect to the internet (WiFi/Ethernet)
 
 > [!TIP]
-> Refer to the [NeoRacer vehicle setup guide](https://neobotics.org/docs/getting-started/prepare-the-car) for details on setting up the vehicle.
+> Refer to the [NeoRacer vehicle setup guide](https://neobotics.org/docs/getting-started/prepare-the-car) to learn more about setting up the vehicle.
 
-## 4. Install
+## 4. Install the drivers
 
-Once the hardware is setup, you can install the [neoracer_ros2_driver](https://github.com/Neobotics-Foundation-Inc/neoracer_ros2_driver).
+Once the hardware is setup, you can install the [`neoracer_ros2_driver`](https://github.com/Neobotics-Foundation-Inc/neoracer_ros2_driver).
+
+- Change directory to `$HOME`:
+    ```bash
+    cd ~
+    ```
+- Clone the [`neoracer-installer`](https://github.com/Neobotics-Foundation-Inc/neoracer-installer) repository:
+    ```bash
+    git clone https://github.com/Neobotics-Foundation-Inc/neoracer-installer.git
+    ```    
+- Run the `install.sh` shell script (single-command installation):
+    > [!IMPORTANT]
+    > Unmask the NVIDIA camera service before installing the `neoracer_ros2_driver`:
+    > ```bash
+    > sudo systemctl unmask nvargus-daemon
+    > ```
+    ```bash
+    bash neoracer-installer/scripts/install.sh
+    ```
+- Reboot (`group membership`, `udev symlinks`, `racecar services`, etc. only take effect on next boot):
+    ```bash
+    sudo reboot
+    ```
 
 > [!TIP]
-> Refer to the [NeoRacer driver installation guide](https://neobotics.org/docs/getting-started/install-driver) for details on installing the ROS 2 driver.
+> Refer to the [NeoRacer driver installation guide](https://neobotics.org/docs/getting-started/install-driver) to learn more about installing the ROS 2 driver.
 
-## 5. Test
+## 5. Test the system
 
-Run the `Async Core Test` notebook to check every sensor and control surface on the car and print a pass/fail summary: https://neobotics.org/docs/getting-started/test-the-system
+Run the `Async Core Test` notebook to check every sensor and control surface on the car and print a pass/fail summary:
 
+- Launch a browser session and go to http://192.168.10.100:8888 to access JupyterLab.
+
+- In the JupyterLab file browser (left pane), go to `neoracer-os` → `labs` → `tests`.
+
+- Open the `test_async_core_real.ipynb` by double-clicking on it.
+
+- Run the notebook by clicking the ▶ button from the toolbar at the top.
+
+- Each test follows a common structure: a title, a short explanation of what is being tested, the code, and the output it prints below. Watch the outputs as they appear.
+
+> [!TIP]
+> Refer to the [NeoRacer driver installation guide](https://neobotics.org/docs/getting-started/test-the-system) to learn more about testing the system.
 
 ## Tips:
 
@@ -257,12 +291,7 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 - Attach the WiFi antennas to the chassis using zip ties before connecting them to the Jetson Wi-Fi card. This helps them stay in place as you work on connecting them.
 
-- Before installing the `neoracer_ros2_driver`, unmask the NVIDIA camera service:
-    ```bash
-    sudo systemctl unmask nvargus-daemon
-    ```
-
-- At least for the very first time you boot the vehicle, you will need a monitor with HDMI cable, and a USB keyboard/mouse to work with the vehicle. You can then choose to set up Remote Desktop via vehicle's router hotspot for later use.
+- At least for the very first time you boot the vehicle, you will need a monitor with HDMI cable, and a USB keyboard/mouse to work with the vehicle. You can then choose to set up [remote desktop](https://neobotics.org/docs/software/remote-desktop) via the [Cudy router hotspot](https://neobotics.org/docs/getting-started/connect-to-router) or the [Jetson access point](https://neobotics.org/docs/software/networking) for later use.
 
 - Ensure all toggle switches are in TOP position before turning the RC transmitter ON (by long-pressing both the power buttons). Set the position of the speed-mode (left-most) toggle switch as desired: TOP (low-speed), BOTTOM (high-speed). Set the position of the driving-mode (second from left) toggle switch as desired: TOP (autonomous), BOTTOM (manual).
 
