@@ -326,7 +326,6 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 ## Further reading
 
-- [NeoRacer official website](https://neobotics.org/kits)
 - [NeoRacer official documentation](https://neobotics.org/docs)
 - [NeoRacer hardware overview](https://neobotics.org/docs/hardware/overview)
 - [NeoRacer networking guide](https://neobotics.org/docs/software/networking)
