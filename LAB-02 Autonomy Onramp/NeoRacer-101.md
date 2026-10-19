@@ -240,7 +240,7 @@ Once the battery is charged, you can begin the hardware setup:
 > [!TIP]
 > Refer to the [NeoRacer vehicle setup guide](https://neobotics.org/docs/getting-started/prepare-the-car) to learn more about setting up the vehicle.
 
-## 4. Install the drivers
+## 4. Install the driver
 
 Once the hardware is set up, you can install the [`neoracer_ros2_driver`](https://github.com/Neobotics-Foundation-Inc/neoracer_ros2_driver).
 
@@ -327,8 +327,6 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 ## Further reading
 
 - [NeoRacer official documentation](https://neobotics.org/docs)
-- [NeoRacer hardware overview](https://neobotics.org/docs/hardware/overview)
-- [NeoRacer networking guide](https://neobotics.org/docs/software/networking)
-- [NeoRacer remote desktop guide](https://neobotics.org/docs/software/remote-desktop)
+- [NeoRacer platform specifications](https://neobotics.org/docs/hardware/overview)
 - [NeoRacer maintenance schedule](https://neobotics.org/docs/reference/maintenance)
 - [NeoRacer frequently asked questions](https://neobotics.org/docs/reference/faq)
