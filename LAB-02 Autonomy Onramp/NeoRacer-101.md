@@ -219,6 +219,9 @@ block
 > [!TIP]
 > Refer to the [NeoRacer unboxing guide](https://neobotics.org/docs/getting-started/unbox) to learn more about the contents of the NeoRacer shipment package.
 
+> [!NOTE]
+The course equipment package includes a few additional components for your convenience that do not ship with the NeoRacer package.
+
 ## 3. Setup the vehicle
 
 The very first step to getting started with the vehicle setup is most likely to charge the LiPo battery, since it would have been in "storage" mode with ~3.85 V/cell (about 11.55 V total).
