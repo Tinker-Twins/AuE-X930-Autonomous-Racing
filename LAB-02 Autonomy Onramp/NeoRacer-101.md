@@ -220,7 +220,7 @@ block
 > Refer to the [NeoRacer unboxing guide](https://neobotics.org/docs/getting-started/unbox) to learn more about the contents of the NeoRacer shipment package.
 
 > [!NOTE]
-The course equipment package includes a few additional components for your convenience that do not ship with the NeoRacer package.
+The course equipment package includes a few additional components for your convenience, which do not ship with the NeoRacer package.
 
 ## 3. Setup the vehicle
 
