@@ -311,13 +311,11 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 - Do NOT let your vehicle's LiPo battery reach a state of deep discharge (when its voltage drops below the safe minimum threshold of 3.0 volts per cell). Stop and charge your battery when the vehicle starts making a beeping sound!
 
-- Configure the charger before plugging the battery in for charging.
+- Configure the charger (set voltage to 4.20 V and current to 2.5 A) before plugging the battery in for charging.
 
 - ⁠The battery charger is ill-designed, make sure to insert the `balance terminal` (4-pin) correctly (since it can go in either way). Ensure that the negative (black) wire of the `balance terminal` connects to the (-) pin of the charger.
 
-- Adjust the charger voltage to 4.20 V and current to 2.5 A.
-
-- NEVER leave batteries on charging unattended.
+- NEVER leave batteries unattended while charging.
 
 - While charging the batteries, make sure to keep the equipment in relatively open/uncrowded spaces and nowhere near any flammable  substances.
 
