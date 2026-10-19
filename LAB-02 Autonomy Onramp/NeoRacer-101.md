@@ -323,8 +323,6 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 - Do NOT charge batteries if you observe any abnormality (puffing, heating, odor, smoke, etc.).
 
-- Do NOT charge the batteries while the discharge terminal is plugged in.
-
 > [!TIP]
 > Refer to the [NeoRacer safety procedures](https://neobotics.org/docs/reference/safety) for more details.
 
