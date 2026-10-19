@@ -13,7 +13,7 @@ By the end of this guide, you should be able to:
 
 - acknowledge the NeoRacer handover;
 - unbox and verify the package contents;
-- setup the vehicle hardware and interfaces;
+- set up the vehicle hardware and interfaces;
 - install NeoRacer dependencies and ROS 2 driver;
 - test core units and interfaces of the vehicle.
 
@@ -141,7 +141,7 @@ Each team will be provided with a course equipment package, which includes:
 - ⁠1 × remote controller (with 4 × AA alkaline batteries)
 - 1 × vehicle stand
 
-Each team will return the NeoRacer hardware and associated components to the designated course staff at the end of the semester in substantially the same condition in which they were received. Ordinary wear and tear is expected and will undergo an acceptance review.
+Each team will return the NeoRacer hardware and associated components to the designated course staff at the end of the semester in substantially the same condition in which they were received. Ordinary wear and tear is expected and will be subject to an acceptance review.
 
 Teams may be responsible for any damage, loss, or misuse of the NeoRacer hardware and associated components during the checkout period, subject to applicable course policies.
 
@@ -222,7 +222,7 @@ block
 > [!NOTE]
 The course equipment package includes a few additional components for your convenience, which do not ship with the NeoRacer package.
 
-## 3. Setup the vehicle
+## 3. Set up the vehicle
 
 The very first step to getting started with the vehicle setup is most likely to charge the LiPo battery, since it would have been in "storage" mode with ~3.85 V/cell (about 11.55 V total).
 
@@ -230,7 +230,7 @@ The very first step to getting started with the vehicle setup is most likely to 
 > Refer to the [NeoRacer battery charging guide](https://neobotics.org/docs/getting-started/charge-and-power) to learn more about charging the battery.
 
 Once the battery is charged, you can begin the hardware setup:
-- Setup the WiFi router (Cudy TR1200)
+- Set up the WiFi router (Cudy TR1200)
 - Attach antennas to Jetson's Wi-Fi card
 - Connect Jetson to power and OSCORE
 - Connect the camera and LIDAR cables
@@ -242,7 +242,7 @@ Once the battery is charged, you can begin the hardware setup:
 
 ## 4. Install the drivers
 
-Once the hardware is setup, you can install the [`neoracer_ros2_driver`](https://github.com/Neobotics-Foundation-Inc/neoracer_ros2_driver).
+Once the hardware is set up, you can install the [`neoracer_ros2_driver`](https://github.com/Neobotics-Foundation-Inc/neoracer_ros2_driver).
 
 - Change directory to `$HOME`:
     ```bash
@@ -288,38 +288,38 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 ## Tips:
 
-- Smaller screws can be difficult to install, try magnetizing the hex key for ease.
+- Smaller screws can be difficult to install; try magnetizing the hex key for ease.
 
-- Once the top platform is disassembled, Jetson WiFi card is accessible from the bottom. You do NOT need to unmount the Jetson carrier board.
+- Once the top platform is disassembled, the Jetson WiFi card is accessible from the bottom. You do NOT need to unmount the Jetson carrier board.
 
 - Attach the WiFi antennas to the chassis using zip ties before connecting them to the Jetson Wi-Fi card. This helps them stay in place as you work on connecting them.
 
-- At least for the very first time you boot the vehicle, you will need a monitor with HDMI cable, and a USB keyboard/mouse to work with the vehicle. You can then choose to set up [remote desktop](https://neobotics.org/docs/software/remote-desktop) via the [Cudy router hotspot](https://neobotics.org/docs/getting-started/connect-to-router) or the [Jetson access point](https://neobotics.org/docs/software/networking) for later use.
+- At least for the very first time you boot the vehicle, you will need a monitor with an HDMI cable, and a USB keyboard/mouse to work with the vehicle. You can then choose to set up [remote desktop](https://neobotics.org/docs/software/remote-desktop) via the [Cudy router hotspot](https://neobotics.org/docs/getting-started/connect-to-router) or the [Jetson access point](https://neobotics.org/docs/software/networking) for later use.
 
-- Ensure all toggle switches are in TOP position before turning the RC transmitter ON (by long-pressing both the power buttons). Set the position of the speed-mode (left-most) toggle switch as desired: TOP (low-speed), BOTTOM (high-speed). Set the position of the driving-mode (second from left) toggle switch as desired: TOP (autonomous), BOTTOM (manual).
+- Ensure all toggle switches are in the TOP position before turning the RC transmitter ON (by long-pressing both the power buttons). Set the position of the speed-mode (left-most) toggle switch as desired: TOP (low-speed), BOTTOM (high-speed). Set the position of the driving-mode (second from left) toggle switch as desired: TOP (autonomous), BOTTOM (manual).
 
 > [!TIP]
 > Refer to the [NeoRacer troubleshooting tips](https://neobotics.org/docs/reference/troubleshooting) for more details.
 
 ## Safety:
 
-- Operate the vehicle ONLY in open/uncrowded spaces, with at least one dedicated person operating the remote controller for manual override.
+- Operate the vehicle ONLY in open/uncrowded spaces, with at least one dedicated person operating the RC transmitter for manual override.
 
 - The vehicle speed in autonomous mode is regulated to 6 m/s for safety.
 
-- NEVER leave the vehicle powered unattended.
+- **NEVER** leave the vehicle powered unattended.
 
-- Do NOT let your vehicle's LiPo battery reach a state of deep discharge (when its voltage drops below the safe minimum threshold of 3.0 volts per cell). Stop and charge your battery when the vehicle starts making a beeping sound!
+- Do **NOT** let your vehicle's LiPo battery reach a state of deep discharge (when its voltage drops below the safe minimum threshold of 3.0 volts per cell). Stop and charge your battery when the vehicle starts beeping!
 
-- Configure the charger (set voltage to 4.20 V and current to 2.5 A) before plugging the battery in for charging.
+- Configure the charger (set voltage to 4.20 V and current to 2.5 A) **BEFORE** plugging the battery in for charging.
 
 - ⁠The battery charger is ill-designed, make sure to insert the `balance terminal` (4-pin) correctly (since it can go in either way). Ensure that the negative (black) wire of the `balance terminal` connects to the (-) pin of the charger.
 
-- NEVER leave batteries unattended while charging.
+- **NEVER** leave batteries unattended while charging.
 
-- While charging the batteries, make sure to keep the equipment in relatively open/uncrowded spaces and nowhere near any flammable  substances.
+- While charging the batteries, make sure to keep the equipment in relatively open/uncrowded spaces and nowhere near any flammable substances.
 
-- Do NOT charge batteries if you observe any abnormality (puffing, heating, odor, smoke, etc.).
+- Do **NOT** charge batteries if you observe any abnormality (puffing, heating, odor, smoke, etc.).
 
 > [!TIP]
 > Refer to the [NeoRacer safety procedures](https://neobotics.org/docs/reference/safety) for more details.
