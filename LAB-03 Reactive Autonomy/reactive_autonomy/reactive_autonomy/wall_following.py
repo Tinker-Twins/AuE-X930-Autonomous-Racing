@@ -99,7 +99,7 @@ class Wall_Following(Node):
     def __init__(self):
         # Node infrastructure
         super().__init__('wall_following') # Create a node with name 'wall_following'
-        qos_profile = QoSProfile( # Ouality of Service profile
+        qos_profile = QoSProfile( # Quality of Service profile
             reliability=ReliabilityPolicy.RELIABLE, # Reliable (not best effort) communication
             history=HistoryPolicy.KEEP_LAST, # Keep/store only up to last N samples
             depth=10 # Queue size/depth of 10 (only honored if the “history” policy was set to “keep last”)
