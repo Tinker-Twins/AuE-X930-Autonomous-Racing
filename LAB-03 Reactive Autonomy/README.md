@@ -71,18 +71,23 @@ reactive_autonomy/
     Update any algorithm parameters within the respective `yaml` file in the `config` directory.
 
 2. Run the [`autodrive_neoracer_api`](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_api) container with the workspace mounted:
-    ```bash
-    docker run --name autodrive_neoracer_api --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v "$PWD/aueX930_ws":/root/aueX930_ws --env DISPLAY --privileged --gpus all autodriveecosystem/autodrive_neoracer_api:2026-fall-practice
-    ```
+   - `AMD64` Architecture:
+       ```bash
+        docker run --name autodrive_neoracer_api --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v "$PWD/aueX930_ws":/root/aueX930_ws --env DISPLAY --privileged --gpus all autodriveecosystem/autodrive_neoracer_api:2026-fall-amd64
+       ```
+   - `ARM64` Architecture:
+       ```bash
+        docker run --name autodrive_neoracer_api --rm -it --network=host --ipc=host -v "$PWD/aueX930_ws":/root/aueX930_ws --privileged autodriveecosystem/autodrive_neoracer_api:2026-fall-arm64
+       ```
 
-3. In the container, build and source the workspace:
+4. In the container, build and source the workspace:
     ```bash
     cd ~/aueX930_ws
     colcon build --symlink-install --packages-select reactive_autonomy
     source install/setup.bash
     ```
 
-4. Run the [`autodrive_neoracer_sim`](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_sim) container in a separate host terminal:
+5. Run the [`autodrive_neoracer_sim`](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_sim) container in a separate host terminal:
     ```bash
     docker run --name autodrive_neoracer_sim --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env DISPLAY --privileged --gpus all autodriveecosystem/autodrive_neoracer_sim:2026-fall-practice
     ```
