@@ -155,3 +155,7 @@ reactive_autonomy/
 ### Wall following
 
 ![Wall following](demo_videos/wall_following.gif)
+
+### Gap following
+
+![Gap following](demo_videos/gap_following.gif)
