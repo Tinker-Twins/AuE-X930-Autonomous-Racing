@@ -57,6 +57,8 @@ setup(
         'console_scripts': [
             'emergency_braking = reactive_autonomy.emergency_braking:main',
             'wall_following = reactive_autonomy.wall_following:main',
+            'gap_following = reactive_autonomy.gap_following:main',
         ],
     },
 )
+
