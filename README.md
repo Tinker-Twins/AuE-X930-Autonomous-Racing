@@ -34,18 +34,16 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
     <summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-03%20Reactive%20Autonomy"><b>LAB-03:</b> Reactive Autonomy</a></summary>
     <ul>
         <table>
-          <!-- Header Row -->
-          <tr>
-            <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Emergency Braking</a></th>
-            <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Wall Following</a></th>
-            <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Gap Following</a></th>
-          </tr>
-          <!-- Data Row -->
-          <tr>
-            <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/emergency_braking.gif"></td>
-            <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/wall_following.gif"></td>
-            <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/gap_following.gif"></td>
-          </tr>
+            <tr>
+                <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/demo_videos/emergency_braking.gif"></td>
+                <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/demo_videos/wall_following.gif"></td>
+                <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/demo_videos/gap_following.gif"></td>
+            </tr>
+            <tr>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Emergency Braking</a></th>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Wall Following</a></th>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Gap Following</a></th>
+            </tr>
         </table>
     </ul>
 </details>
