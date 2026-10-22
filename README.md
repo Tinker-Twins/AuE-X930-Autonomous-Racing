@@ -14,7 +14,7 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
 
 ## Labs
 
-<details>
+<details open>
     <summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp"><b>LAB-01:</b> Developer Onramp</a></summary>
     <ul>
         <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp/Linux-101.md">Linux 101</a></li>
@@ -23,7 +23,7 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
     </ul>
 </details>
 
-<details>
+<details open>
     <summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp"><b>LAB-02:</b> Autonomy Onramp</a></summary>
     <ul>
         <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp/ROS-101.md">ROS 101</a></li>
@@ -32,7 +32,7 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
     </ul>
 </details>
 
-<details>
+<details open>
     <summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-03%20Reactive%20Autonomy"><b>LAB-03:</b> Reactive Autonomy</a></summary>
     <ul>
         <table>
