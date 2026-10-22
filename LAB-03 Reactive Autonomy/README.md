@@ -6,6 +6,7 @@ The `reactive_autonomy` ROS 2 package contains reference implementations of mult
 
 - **Emergency braking** algorithm uses LIDAR measurements to detect imminent frontal collisions and trigger emergency braking when necessary.
 - **Wall following** algorithm uses LIDAR measurements to maintain a safe distance from track boundaries and navigate the racetrack without collisions.
+- **Gap following** algorithm uses LIDAR measurements to find gaps and target the farthest reachable point to navigate the racetrack without collisions.
 
 > [!NOTE]
 > - The ROS 2 nodes subscribe to `/scan` (`sensor_msgs/msg/LaserScan`) and publish to `/drive` (`ackermann_msgs/msg/AckermannDriveStamped`).
@@ -19,13 +20,16 @@ reactive_autonomy/
 ├── config/
 │   ├── emergency_braking.yaml
 │   └── wall_following.yaml
+│   └── gap_following.yaml
 ├── launch/
 │   ├── emergency_braking.launch.py
 │   └── wall_following.launch.py
+│   └── gap_following.launch.py
 ├── reactive_autonomy/
 │   ├── __init__.py
 │   ├── emergency_braking.py
 │   └── wall_following.py
+│   └── gap_following.py
 ├── resource/
 │   └── reactive_autonomy
 ├── test/
@@ -39,11 +43,14 @@ reactive_autonomy/
 
 - `config/emergency_braking.yaml` — default parameters for the `emergency_braking` node when started by its launch file.
 - `config/wall_following.yaml` — default parameters for the `wall_following` node when started by its launch file.
+- `config/gap_following.yaml` — default parameters for the `gap_following` node when started by its launch file.
 - `launch/emergency_braking.launch.py` — starts the `emergency_braking` executable and loads its YAML configuration.
 - `launch/wall_following.launch.py` — starts the `wall_following` executable and loads its YAML configuration.
+- `launch/gap_following.launch.py` — starts the `gap_following` executable and loads its YAML configuration.
 - `reactive_autonomy/__init__.py` — marks the Python module directory as the `reactive_autonomy` package.
 - `reactive_autonomy/emergency_braking.py` — implements the `emergency_braking` algorithm as a ROS 2 node.
 - `reactive_autonomy/wall_following.py` — implements the `wall_following` algorithm as a ROS 2 node.
+- `reactive_autonomy/gap_following.py` — implements the `gap_following` algorithm as a ROS 2 node.
 - `resource/reactive_autonomy` — ament resource marker used to register the package in the ROS 2 package index.
 - `test/test_copyright.py` — checks package files for required copyright notices.
 - `test/test_flake8.py` — checks Python code style with Flake8.
@@ -53,7 +60,7 @@ reactive_autonomy/
 - `setup.py` — defines the Python package, installed data files, metadata, and console entry points.
 
 > [!TIP]
-> - `reactive_autonomy` is an `ament_python` package with multiple console executables: `emergency_braking` and `wall_following`. Run only one node at a time to avoid a race condition, since they all publish to `/drive` topic.
+> - `reactive_autonomy` is an `ament_python` package with multiple console executables: `emergency_braking`, `wall_following`, and `gap_following`. Run only one node at a time to avoid a race condition, since they all publish to the `/drive` topic.
 > - The package was created with:
 >   ```bash
 >   ros2 pkg create --build-type ament_python reactive_autonomy --dependencies rclpy std_msgs geometry_msgs sensor_msgs nav_msgs ackermann_msgs
@@ -104,6 +111,10 @@ reactive_autonomy/
       ```bash
       ros2 launch reactive_autonomy wall_following.launch.py
       ```
+    - Gap Following:
+      ```bash
+      ros2 launch reactive_autonomy gap_following.launch.py
+      ```
     Stop the node with `Ctrl`+`C` before starting another node that publishes to `/drive` topic to avoid a race condition.
 
     While the node is running, you can update certain algorithm parameters using ROS 2 CLI:
@@ -137,6 +148,10 @@ reactive_autonomy/
     - Wall Following:
       ```bash
       ros2 launch reactive_autonomy wall_following.launch.py
+      ```
+    - Gap Following:
+      ```bash
+      ros2 launch reactive_autonomy gap_following.launch.py
       ```
     
     Stop the node with `Ctrl`+`C` before starting another node that publishes to `/drive` topic to avoid a race condition.
