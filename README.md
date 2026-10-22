@@ -12,6 +12,8 @@
 
 This repository hosts lab resources for the mixed undergraduate and graduate course AuE-4930/6930 "Autonomous Vehicles: Racing Application" at CU-ICAR (Fall 2026).
 
+## Labs
+
 <details>
     <summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp"><b>LAB-01:</b> Developer Onramp</a></summary>
     <ul>
