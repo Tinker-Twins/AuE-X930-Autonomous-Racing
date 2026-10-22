@@ -103,15 +103,15 @@ reactive_autonomy/
 6. Teleoperate and bring the NeoRacer digital twin to a desired initial pose. Use the `Driving Mode Button` in the ` Menu Panel` on the left-hand side to toggle the driving mode of the vehicle between `Manual` and `Autonomous` (default is `Autonomous`). The selected driving mode is displayed beside this button. The vehicle will listen to the `/drive` topic while in `Autonomous` mode.
 
 7. Launch the reactive autonomy algorithm:
-    - Emergency Braking:
+    - Emergency braking:
       ```bash
       ros2 launch reactive_autonomy emergency_braking.launch.py
       ```
-    - Wall Following:
+    - Wall following:
       ```bash
       ros2 launch reactive_autonomy wall_following.launch.py
       ```
-    - Gap Following:
+    - Gap following:
       ```bash
       ros2 launch reactive_autonomy gap_following.launch.py
       ```
@@ -141,15 +141,15 @@ reactive_autonomy/
 3. Place the NeoRacer physical twin on the ground and make sure the area is secure for any experimentation. Flip the toggle switch (second from left) on the RC transmitter to the bottom position for the vehicle to listen to the `/drive` topic (i.e., operate in `Autonomous` mode). The toggle switch can be flipped to the top position during an autonomous run for manual override to avoid any collisions or accidents.
 
 4. Launch the reactive autonomy algorithm:
-    - Emergency Braking:
+    - Emergency braking:
       ```bash
       ros2 launch reactive_autonomy emergency_braking.launch.py
       ```
-    - Wall Following:
+    - Wall following:
       ```bash
       ros2 launch reactive_autonomy wall_following.launch.py
       ```
-    - Gap Following:
+    - Gap following:
       ```bash
       ros2 launch reactive_autonomy gap_following.launch.py
       ```
