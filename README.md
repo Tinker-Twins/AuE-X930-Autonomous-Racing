@@ -12,6 +12,42 @@
 
 This repository hosts lab resources for the mixed undergraduate and graduate course AuE-4930/6930 "Autonomous Vehicles: Racing Application" at CU-ICAR (Fall 2026).
 
+<details>
+<summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp"><b>LAB-01:</b> Developer Onramp</a></summary>
+<ul>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp/Linux-101.md">Linux 101</a></li>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-01%20Developer%20Onramp/Git-101.md">Git 101</a></li>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-01%20Developer%20Onramp/Docker-101.md">Docker 101</a></li>
+</ul>
+</details>
+
+<details>
+<summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp"><b>LAB-02:</b> Autonomy Onramp</a></summary>
+<ul>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp/ROS-101.md">ROS 101</a></li>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp/AutoDRIVE-101.md">AutoDRIVE 101</a></li>
+    <li><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-02%20Autonomy%20Onramp/NeoRacer-101.md">NeoRacer 101</a></li>
+</ul>
+</details>
+
+<details>
+<summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-03%20Reactive%20Autonomy"><b>LAB-03:</b> Reactive Autonomy</a></summary>
+<table>
+  <!-- Header Row -->
+  <tr>
+    <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Emergency Braking</a></th>
+    <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Wall Following</a></th>
+    <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy">Gap Following</a></th>
+  </tr>
+  <!-- Data Row -->
+  <tr>
+    <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/emergency_braking.gif"></td>
+    <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/wall_following.gif"></td>
+    <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/edit/main/LAB-03%20Reactive%20Autonomy/demo_videos/gap_following.gif"></td>
+  </tr>
+</table>
+</details>
+
 ## Citation
 
 We encourage you to read and cite the following papers if you use any part of this framework:
