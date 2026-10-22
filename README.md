@@ -40,9 +40,9 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
                 <td><img src="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/demo_videos/gap_following.gif"></td>
             </tr>
             <tr>
-                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Emergency Braking</a></th>
-                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Wall Following</a></th>
-                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy">Gap Following</a></th>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/reactive_autonomy/reactive_autonomy/emergency_braking.py">Emergency Braking</a></th>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/reactive_autonomy/reactive_autonomy/wall_following.py">Wall Following</a></th>
+                <th><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/blob/main/LAB-03%20Reactive%20Autonomy/reactive_autonomy/reactive_autonomy/gap_following.py">Gap Following</a></th>
             </tr>
         </table>
     </ul>
