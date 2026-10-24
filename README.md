@@ -43,9 +43,11 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
 
 ## Citation
 
-We encourage you to read and cite the following papers if you use any part of this framework:
+We encourage you to read and cite the following papers if you use any of these lab resources:
 
-#### [AutoDRIVE: A Comprehensive, Flexible and Integrated Digital Twin Ecosystem for Enhancing Autonomous Driving Research and Education](https://arxiv.org/abs/2212.05241)
+<details>
+<summary><a href="https://doi.org/10.3390/robotics12030077">AutoDRIVE: A Comprehensive, Flexible and Integrated Digital Twin Ecosystem for Enhancing Autonomous Driving Research and Education</summary>
+
 ```bibtex
 @article{AutoDRIVE-Ecosystem-2023,
 author = {Samak, Tanmay and Samak, Chinmay and Kandhasamy, Sivanathan and Krovi, Venkat and Xie, Ming},
@@ -60,9 +62,13 @@ issn = {2218-6581},
 doi = {10.3390/robotics12030077}
 }
 ```
-This work has been published in **MDPI Robotics.** The open-access publication can be found on [MDPI](https://doi.org/10.3390/robotics12030077).
+Preprint of this paper is available on [arXiv](https://arxiv.org/abs/2212.05241).
 
-#### [AutoDRIVE Simulator: A Simulator for Scaled Autonomous Vehicle Research and Education](https://arxiv.org/abs/2103.10030)
+</details>
+
+<details>
+<summary><a href="https://doi.org/10.3390/robotics12030077">AutoDRIVE Simulator: A Simulator for Scaled Autonomous Vehicle Research and Education</summary>
+
 ```bibtex
 @inproceedings{AutoDRIVE-Simulator-2021,
 author = {Samak, Tanmay Vilas and Samak, Chinmay Vilas and Xie, Ming},
@@ -80,4 +86,6 @@ location = {Qingdao, China},
 series = {CCRIS'21}
 }
 ```
-This work has been published at **2021 International Conference on Control, Robotics and Intelligent System (CCRIS).** The publication can be found on [ACM Digital Library](https://dl.acm.org/doi/abs/10.1145/3483845.3483846).
+Preprint of this paper is available on [arXiv](https://arxiv.org/abs/2103.10030).
+
+</details>
