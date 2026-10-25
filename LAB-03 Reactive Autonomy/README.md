@@ -12,6 +12,7 @@ The `reactive_autonomy` ROS 2 package contains reference implementations of mult
 > - The ROS 2 nodes subscribe to `/scan` (`sensor_msgs/msg/LaserScan`) and publish to `/drive` (`ackermann_msgs/msg/AckermannDriveStamped`).
 > - `/scan` contains an array of 360° range measurements spanning -180° to 180° at 0.25° resolution, represented as a 1440-bin array of float32 distances in meters. The `ranges` index 0 points straight behind the vehicle, and the subsequent elements progress counter-clockwise. Only the 270 deg window (|angle| <= 135°) carries returns; no-return = `inf`. The rear sector (between 135° and 225°) is blind; returns `inf`.
 > - `/drive` expects `speed` and `steering_angle` commands for the vehicle to be normalized `[-1.0, 1.0]`. The actuation limits of the vehicle for `speed` and `steering_angle` are ±6 m/s (safety cap) and ±0.5236 rad (30°). For `speed`, positive command corresponds to forward vehicle motion, while negative command corresponds to reverse vehicle motion. For `steering_angle`, positive command corresponds to left-hand turn, while negative command corresponds to right-hand turn.
+> - The default parameters of the `emergency_braking`, `wall_following`, and `gap_following` algorithms are deliberately sub-optimal to promote experiential learning. Tune them to improve the system’s performance and evaluate the impact of each parameter on the resulting behavior.
 
 ## Package description
 
