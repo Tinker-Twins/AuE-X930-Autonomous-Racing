@@ -286,7 +286,7 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 > [!TIP]
 > Refer to the [NeoRacer driver installation guide](https://neobotics.org/docs/getting-started/test-the-system) to learn more about testing the system.
 
-## Tips:
+## Tips
 
 - Smaller screws can be difficult to install; try magnetizing the hex key for ease.
 
@@ -301,7 +301,7 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 > [!TIP]
 > Refer to the [NeoRacer troubleshooting tips](https://neobotics.org/docs/reference/troubleshooting) for more details.
 
-## Safety:
+## Safety
 
 - Operate the vehicle ONLY in open/uncrowded spaces, with at least one dedicated person operating the RC transmitter for manual override.
 
