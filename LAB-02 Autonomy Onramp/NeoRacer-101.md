@@ -303,7 +303,7 @@ Run the `Async Core Test` notebook to check every sensor and control surface on 
 
 ## Safety
 
-- Operate the vehicle ONLY in open/uncrowded spaces, with at least one dedicated person operating the RC transmitter for manual override.
+- Operate the vehicle **ONLY** in open/uncrowded spaces, with at least one dedicated person operating the RC transmitter for manual override.
 
 - The vehicle speed in autonomous mode is regulated to 6 m/s for safety.
 
