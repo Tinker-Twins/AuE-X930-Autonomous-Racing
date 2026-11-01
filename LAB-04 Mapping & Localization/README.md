@@ -25,6 +25,6 @@ ros2 launch mapping_localization localization_amcl.launch.py
 ## Navigation
 
 ```bash
-ros2 launch mapping_localization nav_teb.launch.py
-ros2 launch mapping_localization nav_dwa.launch.py
+ros2 launch mapping_localization navigation_teb.launch.py
+ros2 launch mapping_localization navigation_dwa.launch.py
 ```
