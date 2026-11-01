@@ -1,0 +1,117 @@
+################################################################################
+
+# Copyright (c) 2026, Tinker Twins, AutoDRIVE Ecosystem
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+
+# 1. Redistributions of source code must retain the above copyright notice, this
+#    list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+################################################################################
+# AMCL
+################################################################################
+
+amcl:
+  ros__parameters:
+    use_sim_time: False # Whether to use simulation time from /clock
+
+    global_frame_id: map           # Global localization frame
+    odom_frame_id: odom            # Odometry frame
+    base_frame_id: base_link       # Robot base frame
+    map_topic: map                 # Occupancy map topic
+    scan_topic: scan               # LIDAR scan topic
+    tf_broadcast: true             # Whether AMCL broadcasts the map-to-odometry transform
+    transform_tolerance: 0.3       # Transform time tolerance (seconds)
+    save_pose_rate: 0.5            # Frequency (Hz) for saving the estimated pose
+    beam_skip_distance: 0.5        # Distance (meters) used to identify disagreeing LIDAR beams
+    beam_skip_error_threshold: 1.0 # Skipped-beam fraction above which all beams are reconsidered
+    beam_skip_threshold: 0.3       # Particle agreement fraction required to retain a beam
+    do_beamskip: false             # Whether to reject inconsistent beams in supported LIDAR models
+
+    # Measurement model
+    laser_model_type: "likelihood_field"  # LIDAR measurement model used to score particles
+    laser_max_range: 25.0                 # Maximum accepted LIDAR range (meters)
+    laser_min_range: 0.15                 # Minimum accepted LIDAR range (meters)
+    max_beams: 150                        # Maximum number of LIDAR beams used per filter update
+    lambda_short: 0.1                     # Exponential decay rate for unexpectedly short LIDAR readings
+    laser_likelihood_max_dist: 2.0        # Maximum obstacle distance (meters) in the likelihood field
+    sigma_hit: 0.10                       # Standard deviation (meters) of the LIDAR hit model
+    update_min_a: 0.03                    # Minimum rotation (radians) before a filter update
+    update_min_d: 0.03                    # Minimum translation (meters) before a filter update
+    z_hit: 0.85                           # Weight of expected obstacle hits in the LIDAR model
+    z_max: 0.05                           # Weight of maximum-range readings in the LIDAR model
+    z_rand: 0.05                          # Weight of random readings in the LIDAR model
+    z_short: 0.05                         # Weight of unexpectedly short readings in the LIDAR model
+
+    # Motion model
+    robot_model_type: "nav2_amcl::DifferentialMotionModel" # Motion model used to propagate particles
+    alpha1: 0.08                                           # Rotational noise caused by rotation
+    alpha2: 0.08                                           # Rotational noise caused by translation
+    alpha3: 0.15                                           # Translational noise caused by translation
+    alpha4: 0.12                                           # Translational noise caused by rotation
+    alpha5: 0.08                                           # Lateral translation noise for the omnidirectional model
+
+    # Particle sampling
+    max_particles: 4000       # Upper limit on the particle population
+    min_particles: 1000       # Lower limit on the particle population
+    pf_err: 0.05              # Allowed particle-filter approximation error
+    pf_z: 0.99                # Confidence parameter for adaptive particle sampling
+    recovery_alpha_fast: 0.0  # Fast averaging rate for recovery particle injection
+    recovery_alpha_slow: 0.0  # Slow averaging rate for recovery particle injection
+    resample_interval: 1      # Number of filter updates between particle resampling
+
+amcl_map_client:
+  ros__parameters:
+    use_sim_time: False # Whether to use simulation time from /clock
+
+amcl_rclcpp_node:
+  ros__parameters:
+    use_sim_time: False # Whether to use simulation time from /clock
+
+################################################################################
+# MAP SERVER
+################################################################################
+
+map_server:
+  ros__parameters:
+    use_sim_time: False       # Whether to use simulation time from /clock
+    yaml_filename: "map.yaml" # Path to the map metadata YAML file
+    map_topic: /map           # Occupancy map topic
+    frame_id: map             # Frame assigned to the published map
+
+################################################################################
+# MAP SAVER
+################################################################################
+
+map_saver:
+  ros__parameters:
+    use_sim_time: False                 # Whether to use simulation time from /clock
+    save_map_timeout: 5.0               # Maximum wait (seconds) for saving a map
+    free_thresh_default: 0.25           # Default probability threshold for classifying free cells
+    occupied_thresh_default: 0.65       # Default probability threshold for classifying occupied cells
+    map_subscribe_transient_local: True # Whether to request retained map messages with transient-local QoS
+
+################################################################################
+# ROBOT STATE PUBLISHER
+################################################################################
+
+robot_state_publisher:
+  ros__parameters:
+    use_sim_time: False # Whether to use simulation time from /clock

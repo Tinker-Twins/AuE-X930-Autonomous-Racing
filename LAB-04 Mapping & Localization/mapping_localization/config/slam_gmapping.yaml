@@ -1,0 +1,110 @@
+################################################################################
+
+# Copyright (c) 2026, Tinker Twins, AutoDRIVE Ecosystem
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+
+# 1. Redistributions of source code must retain the above copyright notice, this
+#    list of conditions and the following disclaimer.
+#
+# 2. Redistributions in binary form must reproduce the above copyright notice,
+#    this list of conditions and the following disclaimer in the documentation
+#    and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+# AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+# SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+# CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+# OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+################################################################################
+
+/slam_gmapping:
+  ros__parameters:
+    ############################################################################
+    # MAP SIZE AND RESOLUTION
+    ############################################################################
+    delta: 0.025                    # Map grid size (meters)
+    xmin: -30.0                     # Minimum x-coordinate of the map (meters)
+    xmax: 30.0                      # Maximum x-coordinate of the map (meters)
+    ymin: -30.0                     # Minimum y-coordinate of the map (meters)
+    ymax: 30.0                      # Maximum y-coordinate of the map (meters)
+    map_update_interval: 1.5        # Rate to refresh global map (seconds)
+    occ_thresh: 0.25                # Occupancy threshold for map cells (0.0 to 1.0)
+
+    ############################################################################
+    # LIDAR
+    ############################################################################
+    maxRange: 25.0                  # Maximum range of the LIDAR to consider (meters)
+    maxUrange: 20.0                 # Effective beam range, leave margin for outliers (meters)
+    lskip: 1                        # Number of LIDAR beams to skip in each scan process
+
+    ############################################################################
+    # UPDATE TRIGGERS
+    ############################################################################
+    linearUpdate: 0.10              # Linear displacement to trigger update (meters)
+    angularUpdate: 0.12             # Angular displacement to trigger update (radians)
+    temporalUpdate: 0.8             # Time threshold to force update if no trigger (seconds)
+
+    ############################################################################
+    # PARTICLE FILTER
+    ############################################################################
+    particles: 35                   # Particle count
+    resampleThreshold: 0.55         # Resample when effective ratio drops below this threshold
+
+    #############################################################################
+    # MOTION MODEL
+    #############################################################################
+    srr: 0.05                       # Forward‑forward noise (translation error)
+    srt: 0.08                       # Forward‑turn noise (translation affects rotation)
+    str: 0.05                       # Turn‑forward noise (rotation affects translation)
+    stt: 0.10                       # Turn‑turn noise (rotation error)
+
+    #############################################################################
+    # SCAN MATCHING
+    #############################################################################
+    iterations: 5                   # Scan‑matching iterations
+    lstep: 0.04                     # Linear search step size (meters)
+    astep: 0.04                     # Angular search step size (radians)
+    llsamplerange: 0.01             # Linear search range for scan matching (meters)
+    llsamplestep: 0.01              # Linear search step for scan matching (meters)
+    lasamplerange: 0.005            # Angular search range for scan matching (meters)
+    lasamplestep: 0.005             # Angular search step for scan matching (meters)
+    minimum_score: 0.0              # Minimum score threshold for scan matching
+    sigma: 0.05                     # Standard deviation for scan matching (meters)
+    lsigma: 0.075                   # Standard deviation for likelihood field (meters)
+    ogain: 3.0                      # Gain for likelihood field scoring
+    kernelSize: 1                   # Search window for the scan matching process
+
+    #############################################################################
+    # TRANSFORMATION AND TIME
+    #############################################################################    
+    base_frame: base_footprint
+    map_frame: map
+    odom_frame: odom
+    transform_publish_period: 0.02  # 50 Hz
+    use_sim_time: false
+
+    #############################################################################
+    # QUALITY OF SERVICE
+    #############################################################################
+    qos_overrides:
+      /parameter_events:
+        publisher:
+          depth: 1000
+          durability: volatile
+          history: keep_last
+          reliability: reliable
+      /tf:
+        publisher:
+          depth: 100
+          durability: volatile
+          history: keep_last
+          reliability: reliable
