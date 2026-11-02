@@ -166,12 +166,12 @@ reactive_autonomy/
 
 ### Emergency braking
 
-![Emergency braking](demo_videos/emergency_braking.gif)
+![](demo_videos/emergency_braking.gif)
 
 ### Wall following
 
-![Wall following](demo_videos/wall_following.gif)
+![](demo_videos/wall_following.gif)
 
 ### Gap following
 
-![Gap following](demo_videos/gap_following.gif)
+![](demo_videos/gap_following.gif)
