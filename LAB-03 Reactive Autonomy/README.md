@@ -88,22 +88,22 @@ reactive_autonomy/
         docker run --name autodrive_neoracer_api --rm -it --network=host --ipc=host -v "$PWD/aueX930_ws":/root/aueX930_ws --privileged autodriveecosystem/autodrive_neoracer_api:2026-fall-arm64
        ```
 
-4. In the container, build and source the workspace:
+3. In the container, build and source the workspace:
     ```bash
     cd ~/aueX930_ws
     colcon build --symlink-install --packages-select reactive_autonomy
     source install/setup.bash
     ```
 
-5. Run the [`autodrive_neoracer_sim`](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_sim) container in a separate host terminal:
+4. Run the [`autodrive_neoracer_sim`](https://hub.docker.com/r/autodriveecosystem/autodrive_neoracer_sim) container in a separate host terminal:
     ```bash
     docker run --name autodrive_neoracer_sim --rm -it --network=host --ipc=host -v /tmp/.X11-unix:/tmp/.X11-unix:rw --env DISPLAY --privileged --gpus all autodriveecosystem/autodrive_neoracer_sim:2026-fall-practice
     ```
     Alternatively, you can choose to use the standalone executable of the AutoDRIVE Simulator for [Linux](https://github.com/AutoDRIVE-Ecosystem/Clemson-University-AuE-X930-Tech-Stack/releases/download/2026-fall/autodrive_simulator_practice_linux.zip) | [Windows](https://github.com/AutoDRIVE-Ecosystem/Clemson-University-AuE-X930-Tech-Stack/releases/download/2026-fall/autodrive_simulator_practice_windows.zip) | [macOS](https://github.com/AutoDRIVE-Ecosystem/Clemson-University-AuE-X930-Tech-Stack/releases/download/2026-fall/autodrive_simulator_practice_macos.zip) depending on your requirement.
 
-6. Teleoperate and bring the NeoRacer digital twin to a desired initial pose. Use the `Driving Mode Button` in the ` Menu Panel` on the left-hand side to toggle the driving mode of the vehicle between `Manual` and `Autonomous` (default is `Autonomous`). The selected driving mode is displayed beside this button. The vehicle will listen to the `/drive` topic while in `Autonomous` mode.
+5. Teleoperate and bring the NeoRacer digital twin to a desired initial pose. Use the `Driving Mode Button` in the ` Menu Panel` on the left-hand side to toggle the driving mode of the vehicle between `Manual` and `Autonomous` (default is `Autonomous`). The selected driving mode is displayed beside this button. The vehicle will listen to the `/drive` topic while in `Autonomous` mode.
 
-7. Launch the reactive autonomy algorithm:
+6. Launch the reactive autonomy algorithm:
     - Emergency braking:
       ```bash
       ros2 launch reactive_autonomy emergency_braking.launch.py
