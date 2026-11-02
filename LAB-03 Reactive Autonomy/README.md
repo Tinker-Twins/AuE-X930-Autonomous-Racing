@@ -19,23 +19,23 @@ The `reactive_autonomy` ROS 2 package contains reference implementations of mult
 ```text
 reactive_autonomy/
 ├── config/
-│   ├── emergency_braking.yaml
+│   └── emergency_braking.yaml
 │   └── wall_following.yaml
 │   └── gap_following.yaml
 ├── launch/
-│   ├── emergency_braking.launch.py
+│   └── emergency_braking.launch.py
 │   └── wall_following.launch.py
 │   └── gap_following.launch.py
 ├── reactive_autonomy/
-│   ├── __init__.py
-│   ├── emergency_braking.py
+│   └── __init__.py
+│   └── emergency_braking.py
 │   └── wall_following.py
 │   └── gap_following.py
 ├── resource/
 │   └── reactive_autonomy
 ├── test/
-│   ├── test_copyright.py
-│   ├── test_flake8.py
+│   └── test_copyright.py
+│   └── test_flake8.py
 │   └── test_pep257.py
 ├── package.xml
 ├── setup.cfg
