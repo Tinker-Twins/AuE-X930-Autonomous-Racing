@@ -2,7 +2,7 @@
 
 **Authors:** [Chinmay Samak](https://www.linkedin.com/in/samakchinmay) and [Tanmay Samak](https://www.linkedin.com/in/samaktanmay)
 
-The `mapping_localization` ROS 2 package provides reference implementations for mapping (SLAM), localization, and map-based navigation, which are directly (mapping and localization) or remotely (navigation) relevant to autonomous racing application:
+The `mapping_localization` ROS 2 package provides reference implementations for mapping (SLAM), localization, and map-based navigation, which are directly (mapping and localization) or indirectly (navigation) relevant to autonomous racing application:
 
 - **Mapping** builds an occupancy-grid map of the environment with Simultaneous Localization and Mapping (SLAM) process; using Graph-SLAM, GMapping, or Cartographer algorithmic variants.
 - **Localization** estimates the vehicle pose on a known occupancy-grid map of the environment using Adaptive Monte Carlo Localization (AMCL) algorithm (an adaptive variant of particle filter that dynamically adjusts the total number of particles on the fly using KLD-sampling to save computational overload).
