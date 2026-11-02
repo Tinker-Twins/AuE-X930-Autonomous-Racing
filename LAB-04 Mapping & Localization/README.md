@@ -234,3 +234,23 @@ mapping_localization/
 
 > [!NOTE]
 > Set an initial pose and navigation goal in RViz, and monitor the planned paths and vehicle motion.
+
+## Expected outcomes
+
+### Mapping
+
+| ![](demo_videos/mapping_simulator.gif) | ![](demo_videos/mapping_devkit.gif) |
+|:--------------------------------------:|:-----------------------------------:|
+| AutoDRIVE Simulator                    | AutoDRIVE Devkit                    |
+
+### Localization
+
+| ![](demo_videos/localization_simulator.gif) | ![](demo_videos/localization_devkit.gif) |
+|:-------------------------------------------:|:----------------------------------------:|
+| AutoDRIVE Simulator                         | AutoDRIVE Devkit                         |
+
+### Navigation
+
+| ![](demo_videos/navigation_simulator.gif) | ![](demo_videos/navigation_devkit.gif) |
+|:-------------------------------------------:|:----------------------------------------:|
+| AutoDRIVE Simulator                         | AutoDRIVE Devkit                         |
