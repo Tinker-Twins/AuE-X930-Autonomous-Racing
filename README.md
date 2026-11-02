@@ -41,6 +41,16 @@ This repository hosts lab resources for the mixed undergraduate and graduate cou
 
 </details>
 
+<details open>
+<summary><a href="https://github.com/Tinker-Twins/AuE-X930-Autonomous-Racing/tree/main/LAB-04%20Mapping%20%26%20Localization"><b>LAB-04:</b> Mapping & Localization</a></summary>
+
+| ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/mapping_simulator.gif) | ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/localization_simulator.gif) | ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/navigation_simulator.gif) |
+|:----------------------------------------------------------------------------:|:---------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------:|
+| ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/mapping_devkit.gif)    | ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/localization_devkit.gif)    | ![](LAB-04%20Mapping%20%26%20Localization/demo_videos/navigation_devkit.gif)    |
+| Mapping                                                                      | Localization                                                                      | Navigation                                                                      |
+
+</details>
+
 ## Citation
 
 We encourage you to read and cite the following papers if you use any of these lab resources:
