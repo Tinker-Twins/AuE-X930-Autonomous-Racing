@@ -133,8 +133,8 @@ mapping_localization/
     ros2 run mapping_localization teleop_keyboard
     ```
 
-    > [!NOTE]
-    > Move the vehicle through the environment and inspect the map in RViz. Save the resulting map using the ROS 2 map-saving workflow before using it for localization.
+> [!NOTE]
+> Move the vehicle through the environment and inspect the map in RViz. Save the resulting map using the ROS 2 map-saving workflow before using it for localization.
 
 7. Launch the localization algorithm:
     ```bash
@@ -147,9 +147,9 @@ mapping_localization/
     ros2 run mapping_localization teleop_keyboard
     ```
     
-    > [!NOTE]
-    > - Use RViz to provide an initial pose and inspect the estimated pose against the map.
-    > - The supplied localization stack uses the package's `maps/map.yaml`; update the map used by the launch configuration when using a different map.
+> [!NOTE]
+> - Use RViz to provide an initial pose and inspect the estimated pose against the map.
+> - The supplied localization stack uses the package's `maps/map.yaml`; update the map used by the launch configuration when using a different map.
 
 8. Launch the autonomous navigation algorithm:
     - Dynamic Window Approach (DWA):
@@ -162,8 +162,8 @@ mapping_localization/
       ```
     Stop the node with `Ctrl`+`C` before starting another node to avoid a race condition.
 
-    > [!NOTE]
-    > Set an initial pose and navigation goal in RViz, and monitor the planned paths and vehicle motion.
+> [!NOTE]
+> Set an initial pose and navigation goal in RViz, and monitor the planned paths and vehicle motion.
 
 ### Testbed (physical twin)
 
@@ -203,8 +203,8 @@ mapping_localization/
     ros2 run mapping_localization teleop_keyboard
     ```
 
-    > [!NOTE]
-    > Move the vehicle through the environment and inspect the map in RViz. Save the resulting map using the ROS 2 map-saving workflow before using it for localization.
+> [!NOTE]
+> Move the vehicle through the environment and inspect the map in RViz. Save the resulting map using the ROS 2 map-saving workflow before using it for localization.
 
 5. Launch the localization algorithm:
     ```bash
@@ -217,9 +217,9 @@ mapping_localization/
     ros2 run mapping_localization teleop_keyboard
     ```
     
-    > [!NOTE]
-    > - Use RViz to provide an initial pose and inspect the estimated pose against the map.
-    > - The supplied localization stack uses the package's `maps/map.yaml`; update the map used by the launch configuration when using a different map.
+> [!NOTE]
+> - Use RViz to provide an initial pose and inspect the estimated pose against the map.
+> - The supplied localization stack uses the package's `maps/map.yaml`; update the map used by the launch configuration when using a different map.
 
 6. Launch the autonomous navigation algorithm:
     - Dynamic Window Approach (DWA):
@@ -232,5 +232,5 @@ mapping_localization/
       ```
     Stop the node with `Ctrl`+`C` before starting another node to avoid a race condition.
 
-    > [!NOTE]
-    > Set an initial pose and navigation goal in RViz, and monitor the planned paths and vehicle motion.
+> [!NOTE]
+> Set an initial pose and navigation goal in RViz, and monitor the planned paths and vehicle motion.
